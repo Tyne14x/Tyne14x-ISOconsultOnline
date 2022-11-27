@@ -1,0 +1,260 @@
+{% extends 'iso/base.html' %}
+
+{% block content %}
+<!-- Form Name -->
+<h1 style="background-color:Tomato;">Request For Quote</h1>
+<div class="alert alert-secondary" role="alert">
+    <h1>(In-house training)</h1>
+    <p>EMAIL TO: iso.th@outlook.com</p>
+    <p>Line ID: isoconsult</p>
+</div>
+<!-- Text input-->
+<div class="mb-3">
+<label for="exampleFormControlTextarea1" class="form-label">Issue to company</label>
+<div class="form-floating">
+    <textarea class="form-control" placeholder="ที่อยู่บริษัท" id="floatingTextarea2"
+        style="height: 40px"></textarea>
+</div>
+</div>
+<div class="mb-3">
+<label for="exampleFormControlTextarea1" class="form-label">ออกให้ Address</label>
+<div class="form-floating">
+    <textarea class="form-control" placeholder=" Address " id="floatingTextarea2" style="height: 40px"></textarea>
+</div>
+</div>
+<form class="row">
+<form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4 position-relative">
+        <label for="validationTooltip01" class="form-label">Contact</label>
+        <input type="text" class="form-control" id="validationTooltip01" value="" required>
+        <div class="valid-tooltip">
+        </div>
+    </div>
+    <div class="col-md-4 position-relative">
+        <label for="validationTooltip02" class="form-label">Position</label>
+        <input type="text" class="form-control" id="validationTooltip02" value="" required>
+        <div class="valid-tooltip">
+        </div>
+    </div>
+    <div class="col-md-4 position-relative">
+        <label for="validationTooltip01" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="validationTooltip01" value="" required>
+        <div class="valid-tooltip">
+        </div>
+    </div>
+    <div class="col-md-4 position-relative">
+        <label for="validationTooltip01" class="form-label">Email</label>
+        <input type="text" class="form-control" id="validationTooltip01" value="" required>
+        <div class="valid-tooltip">
+        </div>
+    </div>
+    <div class="col-md-4 position-relative">
+        <label for="validationTooltip01" class="form-label">Fax</label>
+        <input type="text" class="form-control" id="validationTooltip01" value="" required>
+        <div class="valid-tooltip">
+        </div>
+    </div>
+</form>
+    <!-- Billing to -->
+<p>ออกใบเสร็จรับเงินให้</p>
+<div class="row g-3 needs-validation" novalidate>
+    
+    <div class="form-check">
+        <samp><b>Billing to  &nbsp; &nbsp;</b></samp>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+        <label class="form-check-label" for="flexCheckIndeterminate">
+            Same as above address
+        </label>
+    </div>
+</div>
+<form class="row">
+     <div class="col-md-4 position-relative">
+        
+        <label for="validationTooltip01" class="form-label">Company</label>
+        <input type="text" class="form-control" id="validationTooltip01" value="" required>
+        <div class="valid-tooltip">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 40px"></textarea>
+            </div>
+        </div>
+    </div>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Tax ID</label>
+            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+            <div class="valid-tooltip">
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip02" class="form-label">Display</label>
+            <input type="text" class="form-control" id="validationTooltip02" value="" required>
+            <div class="valid-tooltip">
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Title</label>
+            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+            <div class="valid-tooltip">
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+            <div class="valid-tooltip">
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Email</label>
+            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+            <div class="valid-tooltip">
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Fax</label>
+            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+            <div class="valid-tooltip">
+            </div>
+        </div>
+</form>
+<form>
+    <div class="col-md-4 position-relative">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Request For Trainging Course</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+              </div>
+            <label for="requestcouse">ระบุหลักสูตรที่ต้องการ  &nbsp; &nbsp;</label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>ระบุหลักสูตรที่ต้องการ</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+</form>       
+        <!-- Course -->
+<form>
+    <div>
+            <div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">The Number Of Participants</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="The Number Of Participants">
+                  </div>
+                <span>
+                    <label for="">Required Date Of Training:</label>
+                    <input type="date">
+                </span>
+            </div>
+        </div>
+        <div>
+        </div>
+</form>
+<form>
+    <div>
+            <label for="">Request for other courses ระบุหลักสูตรอื่นๆ (หากมี):</label>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                    <label class="form-check-label" for="gridCheck1">Course 1 </label><span>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label for="">Required date:</label>
+                        <input type="date">
+                    </span>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck2">
+                    <label class="form-check-label" for="gridCheck2">Course 2 </label><span>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label for="">Required date:</label>
+                        <input type="date">
+                    </span>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck3">
+                    <label class="form-check-label" for="gridCheck3">Course 3 </label><span>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label for="">Required date:</label>
+                        <input type="date">
+                    </span>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck4">
+                    <label class="form-check-label" for="gridCheck4">Course 4 </label><span>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label for="">Required date:</label>
+                        <input type="date">
+                    </span>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck5">
+                    <label class="form-check-label" for="gridCheck5">Course 5 </label><span>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label for="">Required date:</label>
+                        <input type="date">
+                    </span>
+                </div>
+            </div>
+        </div>
+</form>
+        
+        
+        <!-- Course -->
+    </form>
+    <br>
+    <!-- ปุ่มส่ง -->
+    <div>
+        <center>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </center>
+    </div>
+    <!-- ปุ่มส่ง -->
+    </div>
+    {% endblock %}
