@@ -2,14 +2,20 @@
 
 {% block content %}
 
-
-<div class="container">
-  <h1>ISOConsult</h1>
-  <p>สามารถติดต่อเราได้ที่</p>
-  <P>Facebook</P>
-  <p>Youtube</p>
-  <p>Tel</p>
-  <img src="https://yt3.ggpht.com/zUi8SyliplV9Ja52KSgmn-UbMyKkC8k2Y5lKXD_P8AxrlrK-YW6kWBiZp4D1aIsxkKpmoXimqg=s900-c-k-c0x00ffffff-no-rj" height="250px" width="250px">
-</div>
-
+<body>
+  <h4>Contact Client</h4>
+  <form method="POST">
+    {% csrf_token %}
+    <div>
+      <input type="text" name="name" placeholder="title">
+    </div>
+    <div>
+      <input type="email" name="email" placeholder="company email">
+    </div>
+    <div>
+      <textarea name="message" id="" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit">send</button>
+  </form>
+</body>
 {% endblock %}

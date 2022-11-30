@@ -24,6 +24,13 @@ SECRET_KEY = 'django-insecure-v8gux6s#_1b3j1wbn&fp5rk^0rm0gcooc55vgy^so=#ok%5lau
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+LOGIN_URL = 'login'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'nutaponza123456@gmail.com'
+EMAIL_HOST_PASSWORD = 'yrqigshegrzsjcyj'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 ALLOWED_HOSTS = []
 
@@ -31,6 +38,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp',
     'isoconsult',
     'django.contrib.admin',
     'django.contrib.auth',

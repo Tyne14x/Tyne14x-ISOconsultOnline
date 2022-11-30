@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.conf import settings
 
 #ฟังก์ชัน HomePage
 def HomePage(request):
@@ -10,6 +13,9 @@ def AboutPage(request):
 
 def ContactPage(request):
     return render(request, 'iso/contact.html')
+
+def TestPage(request):
+    return render(request, 'iso/Test.html')
 
 def FormPage(request):
     return render(request, 'iso/form.html')
@@ -32,3 +38,16 @@ def Register(request):
         return redirect('login')
 
     return render(request, 'iso/register.html')
+
+def index(request):
+    if request.method == 'POST':
+        message = request.POST['message']
+        email = request.POST['email']
+        name = request.POST['name']
+        send_mail(
+        'Contact Form',
+        message,
+        'settings.EMAIL_HOST_USER',
+        [email],
+        fail_silently=False)
+    return render(request, 'index.html')
