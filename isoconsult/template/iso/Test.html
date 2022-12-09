@@ -1,23 +1,36 @@
-{% extends 'iso/base.html' %}
-
 {% block content %}
-<!DOCTYPE html>
-<html>
 <body>
-
-<h2>JavaScript HTML Events</h2>
-<p>Click the button to display the date.</p>
-
-<button onclick="displayDate()">The time is?</button>
-
-<script>
-function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
-}
-</script>
-
-<p id="demo"></p>
-
+    <div class="container">
+        <form action="" method="POST" class="contact-form">
+            {% csrf_token %}
+            <div class="form-control">
+                <div class="tag">Full Name</div>
+                <input type="text" name="full-name">
+            </div>
+            <div class="form-control">
+                <div class="tag">Email Customer</div>
+                <input type="text" name="cusemail">
+            </div>
+            <div class="form-control">
+                <div class="tag">phone</div>
+                <input type="text" name="phone">
+            </div>
+            <div class="form-control">
+                <div class="tag">contact</div>
+                <input type="text" name="contact">
+            </div>
+            <div class="form-control">
+                <div class="tag">date</div>
+                <input type="date" name="date" >
+            </div>
+            <div class="form-control">
+                <div class="tag">Message</div>
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-control">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
 </body>
-</html> 
 {% endblock %}

@@ -12,10 +12,42 @@ def AboutPage(request):
     return render(request, 'iso/about.html')
 
 def ContactPage(request):
-    return render(request, 'iso/contact.html')
+    if request.method == 'POST':
+        company = request.POST.get('company')
+        address = request.POST.get('address')
+        contact = request.POST.get('contact')
+        position = request.POST.get('position')
+        cusemail = request.POST.get('cusemail')
+        phone = request.POST.get('phone')
+        fax = request.POST.get('fax')
+        concompany = request.POST.get('con-company')
+        conaddress = request.POST.get('con-address')
 
-def TestPage(request):
-    return render(request, 'iso/Test.html')
+        data = {
+            'company' : company,
+            'address' : address,
+            'contact' : contact,
+            'position': position,
+            'phone' : phone,
+            'cusemail':  cusemail,
+            'fax' : fax,
+            'con-company' : concompany,
+            'con-address' : conaddress,
+        }
+        message = '''
+        Company :{}
+        Address :{}  
+        Contact :{}     Position :{}     
+        Phone :{}       Email :{}       Fax :{}
+        
+        ออกใบเสร็จรับเงินให้
+        Company: {}
+        Address: {}
+        '''.format(data['company'],data['address'],data['contact'],data['position'],data['phone'],
+        data['cusemail'],data['fax'],data['con-company'],data['con-address'])
+
+        send_mail('Contact Form',message, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
+    return render(request, 'iso/contact.html',{})
 
 def FormPage(request):
     return render(request, 'iso/form.html')
@@ -39,15 +71,29 @@ def Register(request):
 
     return render(request, 'iso/register.html')
 
-def index(request):
+def TestPage(request):
     if request.method == 'POST':
-        message = request.POST['message']
-        email = request.POST['email']
-        name = request.POST['name']
-        send_mail(
-        'Contact Form',
-        message,
-        'settings.EMAIL_HOST_USER',
-        [email],
-        fail_silently=False)
-    return render(request, 'index.html')
+        name = request.POST.get('full-name')
+        cusemail = request.POST.get('cusemail')
+        phone = request.POST.get('phone')
+        contact = request.POST.get('contact')
+        date = request.POST.get('date')
+        message = request.POST.get('message')
+
+        data = {
+            'name' : name,
+            'cusemail' : cusemail,
+            'phone' : phone,
+            'contact' : contact,
+            'date' : date,
+            'message' : message
+        }
+        message = '''
+        Name :{}
+        email Customer :{}  Phone :{}    
+        Contact :{}
+        Date : {}
+        message :{}
+        '''.format(data['name'], data['cusemail'],data['phone'],data['contact'],data['date'],data['message'])
+        send_mail('Contact Form',message, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
+    return render(request,'iso/Test.html',{})

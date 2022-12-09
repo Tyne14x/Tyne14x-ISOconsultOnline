@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import HomePage, AboutPage, ContactPage ,Register,FormPage, TestPage #ดึงฟังก์ชัน HomePage มาโชว์
+from .views import HomePage, AboutPage, ContactPage ,Register,FormPage, TestPage #ดึงฟังก์ชันจาก views มา
 
 urlpatterns = [
     # localhost:8000/
