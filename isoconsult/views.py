@@ -33,6 +33,8 @@ def TrainingPage(request):
         datetrain = request.POST.get('date-train')
         addcouse1 = request.POST.get('addcouse1')
         adddate1 = request.POST.get('adddate1')
+        addcouse2 = request.POST.get('addcouse2')
+        adddate2 = request.POST.get('adddate2')
 
 
         data = {
@@ -56,6 +58,9 @@ def TrainingPage(request):
             'date-train' : datetrain,
             'addcouse1' : addcouse1,
             'adddate1' : adddate1,
+            'addcouse2': addcouse2,
+            'adddate2' : adddate2,
+
 
         }
         body = '''
@@ -76,10 +81,11 @@ def TrainingPage(request):
         The number of participants: {}      Required date of training: {}
         Request for other courses ระบุหลักสูตรอื่นๆ (หากมี):
         1.Course 1  {}                    Required date: {}
+        2.Course 2  {}                    Required date: {}
         '''.format(data['company'],data['address'],data['contact'],data['position'],data['phone'],
         data['cusemail'],data['fax'],data['con-company'],data['con-address'],data['numtax'],data['con-contact'],
         data['title'],data['con-phone'],data['con-cusemail'],data['con-fax'],data['req-train-course'],
-        data['nun-partic'],data['date-train'],data['addcouse1'],data['adddate1'])
+        data['nun-partic'],data['date-train'],data['addcouse1'],data['adddate1'],data['addcouse2'],data['adddate2'])
 
         send_mail('Contact Form',body, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
     return render(request, 'iso/training.html',{})
