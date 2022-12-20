@@ -11,7 +11,7 @@ def HomePage(request):
 def AboutPage(request):
     return render(request, 'iso/about.html')
 
-def ContactPage(request):
+def TrainingPage(request):
     if request.method == 'POST':
         company = request.POST.get('company')
         address = request.POST.get('address')
@@ -22,6 +22,18 @@ def ContactPage(request):
         fax = request.POST.get('fax')
         concompany = request.POST.get('con-company')
         conaddress = request.POST.get('con-address')
+        numtax = request.POST.get('numtax')
+        concontact = request.POST.get('con-contact')
+        title = request.POST.get('title')
+        conphone = request.POST.get('con-phone')
+        concusemail = request.POST.get('con-cusemail')
+        confax = request.POST.get('con-fax')
+        reqtraincourse = request.POST.get('req-train-course')
+        nunpartic = request.POST.get('nun-partic')
+        datetrain = request.POST.get('date-train')
+        addcouse1 = request.POST.get('addcouse1')
+        adddate1 = request.POST.get('adddate1')
+
 
         data = {
             'company' : company,
@@ -33,21 +45,44 @@ def ContactPage(request):
             'fax' : fax,
             'con-company' : concompany,
             'con-address' : conaddress,
+            'numtax' : numtax,
+            'con-contact' : concontact,
+            'title' : title,
+            'con-phone' : conphone,
+            'con-cusemail' : concusemail,
+            'con-fax' : confax,
+            'req-train-course' : reqtraincourse,
+            'nun-partic' : nunpartic,
+            'date-train' : datetrain,
+            'addcouse1' : addcouse1,
+            'adddate1' : adddate1,
+
         }
-        message = '''
+        body = '''
         Company :{}
         Address :{}  
         Contact :{}     Position :{}     
         Phone :{}       Email :{}       Fax :{}
         
-        ออกใบเสร็จรับเงินให้
+        Billing to:
+        (ออกใบเสร็จรับเงินให้)
         Company: {}
         Address: {}
-        '''.format(data['company'],data['address'],data['contact'],data['position'],data['phone'],
-        data['cusemail'],data['fax'],data['con-company'],data['con-address'])
+        Tax id: {}      Contact: {}     Title: {}
+        Phone :{}       Email :{}       Fax :{}
 
-        send_mail('Contact Form',message, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
-    return render(request, 'iso/contact.html',{})
+        Request for training course :
+        (ระบุหลักสูตรที่ต้องการ)    {}
+        The number of participants: {}      Required date of training: {}
+        Request for other courses ระบุหลักสูตรอื่นๆ (หากมี):
+        1.Course 1  {}                    Required date: {}
+        '''.format(data['company'],data['address'],data['contact'],data['position'],data['phone'],
+        data['cusemail'],data['fax'],data['con-company'],data['con-address'],data['numtax'],data['con-contact'],
+        data['title'],data['con-phone'],data['con-cusemail'],data['con-fax'],data['req-train-course'],
+        data['nun-partic'],data['date-train'],data['addcouse1'],data['adddate1'])
+
+        send_mail('Contact Form',body, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
+    return render(request, 'iso/training.html',{})
 
 def FormPage(request):
     return render(request, 'iso/form.html')
