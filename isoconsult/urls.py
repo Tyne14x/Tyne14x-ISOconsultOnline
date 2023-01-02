@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import HomePage, AboutPage, TrainingPage ,Register,FormPage, TestPage #ดึงฟังก์ชันจาก views มา
+from .views import HomePage, AboutPage, TrainingPage ,Register ,BlogPage ,ContactPage #ดึงฟังก์ชันจาก views มา
 
 urlpatterns = [
     # localhost:8000/
@@ -7,6 +7,6 @@ urlpatterns = [
     path('about/',AboutPage,name='about-page'),
     path('training/',TrainingPage,name='training-page'),
     path('register/',Register,name='register-page'),
-    path('form/',FormPage,name='form-page'),
-    path('test/',TestPage,name='test-page'),
+    path('blog/',BlogPage,name='blog-page'),
+    path('contact/',ContactPage,name='contact-page'),
 ]

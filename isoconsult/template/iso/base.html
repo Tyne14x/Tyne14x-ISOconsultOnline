@@ -55,21 +55,22 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home-page' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'home-page' %}">HOME<span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'about-page' %}">About</a>
+        <a class="nav-link" href="{% url 'about-page' %}">ELEARNING</a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{% url 'training-page' %}">TRAINING</a>
       </li>
+      
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'form-page' %}">Form</a>
+        <a class="nav-link" href="{% url 'blog-page' %}">BLOG</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'test-page' %}">Test</a>
+        <a class="nav-link" href="{% url 'contact-page' %}">CONTACT</a>
       </li>
     </ul>
     <div>
@@ -103,16 +104,48 @@
 
 </main>
 
-<footer class="container">
-  <p>&copy; ISO</p>
-</footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"72bd33035b38ab56","version":"2022.6.0","r":1,"token":"ebb08103de9142f2a31fad4575cace74","si":100}' crossorigin="anonymous"></script>
+
+
+<!--การ์ด Footer -->
+<div class="card-group">
+  <div class="card">
+      <div class="alert alert-warning" role="alert">
+          <h5 class="card-title">ABOUT ISO CONSULT</h5>
+      </div>
+      <div class="card-body">
+          <p class="card-text"> Our HQ follows the international standard as ISO 17025 and also BOI support.</p>
+          <p class="card-text"> 80/6 Samwa Road, Bangchan, Khlongsamwa, Bangkok 10510</p>
+          <p class="card-text"> info@isoconsult.org</p>
+          <p class="card-text"> Line ID: isoconsult</p>
+      </div>
+  </div>
+  <div class="card">
+      <div class="alert alert-success" role="alert">
+          <h5 class="card-title">DOWNLOAD</h5>
+      </div>
+      <div class="card-body">
+          <p class="card-text">Company Profile</p>
+          <p class="card-text">Training Program</p>
+          <p class="card-text">eNamecard</p>
+          <p class="card-text">Form request for training</p>
+          <p class="card-text">Form request for consulting</p>
+      </div>
+  </div>
+  <div class="card">
+      <div class="alert alert-primary" role="alert">
+          <h5 class="card-title">TIMING</h5>
+      </div>
+      <div class="card-body">
+          <p class="card-text">Mon - Fri: 9 am - 5 pm</p>
+          <p class="card-text">Sat: 8 am - 10 am</p>
+          <p class="card-text">Closings</p>
+          <p class="card-text">Branches</p>
+      </div>
+  </div>
+</div>
+</div>
+
 </body>
 </html>
 

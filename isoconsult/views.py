@@ -90,8 +90,11 @@ def TrainingPage(request):
         send_mail('Contact Form',body, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
     return render(request, 'iso/training.html',{})
 
-def FormPage(request):
-    return render(request, 'iso/form.html')
+def BlogPage(request):
+    return render(request, 'iso/blog.html')
+
+def ContactPage(request):
+    return render(request, 'iso/contact.html')
 
 def Register(request):
     if request.method == 'POST':
@@ -112,29 +115,3 @@ def Register(request):
 
     return render(request, 'iso/register.html')
 
-def TestPage(request):
-    if request.method == 'POST':
-        name = request.POST.get('full-name')
-        cusemail = request.POST.get('cusemail')
-        phone = request.POST.get('phone')
-        contact = request.POST.get('contact')
-        date = request.POST.get('date')
-        message = request.POST.get('message')
-
-        data = {
-            'name' : name,
-            'cusemail' : cusemail,
-            'phone' : phone,
-            'contact' : contact,
-            'date' : date,
-            'message' : message
-        }
-        message = '''
-        Name :{}
-        email Customer :{}  Phone :{}    
-        Contact :{}
-        Date : {}
-        message :{}
-        '''.format(data['name'], data['cusemail'],data['phone'],data['contact'],data['date'],data['message'])
-        send_mail('Contact Form',message, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
-    return render(request,'iso/Test.html',{})

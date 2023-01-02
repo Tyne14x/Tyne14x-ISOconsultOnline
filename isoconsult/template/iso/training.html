@@ -2,16 +2,15 @@
 
 {% block content %}
 <!-- Header -->
-<div class="container bg-light mt-3 p-3 shadow rounded-3">
-    <div class="alert alert-secondary" role="alert">
-        <h1>Request For Quote</h1>
-        <h1>(In-house training)</h1>
-        <p>EMAIL TO: iso.th@outlook.com</p>
-        <p>Line ID: isoconsult</p>
-        <p>Quality Associates Ltd. (00000)
-            80/8 Samwa Road, Bangchan, Khlongsamwa, Bangkok 10510
-            TID 0115550004576</p>
-    </div>
+<h1 style="background-color:Tomato;">Request For Quote</h1>
+<div class="alert alert-secondary" role="alert">
+    <h1>(In-house training)</h1>
+    <p>EMAIL TO: iso.th@outlook.com</p>
+    <p>Line ID: isoconsult</p>
+    <p>Quality Associates Ltd. (00000)
+        80/8 Samwa Road, Bangchan, Khlongsamwa, Bangkok 10510
+        TID 0115550004576</p>
+</div>
     <!-- container -->
     <div class="container bg-light mt-3">
         <form action="" method="POST" class="row g-3">
@@ -148,51 +147,12 @@
                 <input type="date" class="form-control" name="adddate2">
             </div>
 
-            
-
             <div class="col-12 mt-3">
-                <input type="submit" class="btn btn-primary" value="ตกลง">
+                <center>
+                    <input type="submit" class="btn btn-primary" value="Submit form">
+                </center><br>
             </div>
+            
         </form>
     </div>
-    
-    <!--การ์ด Footer -->
-    <div class="card-group">
-        <div class="card">
-            <div class="alert alert-warning" role="alert">
-                <h5 class="card-title">ABOUT ISO CONSULT</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text"> Our HQ follows the international standard as ISO 17025 and also BOI support.</p>
-                <p class="card-text"> 80/6 Samwa Road, Bangchan, Khlongsamwa, Bangkok 10510</p>
-                <p class="card-text"> info@isoconsult.org</p>
-                <p class="card-text"> Line ID: isoconsult</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="alert alert-success" role="alert">
-                <h5 class="card-title">DOWNLOAD</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Company Profile</p>
-                <p class="card-text">Training Program</p>
-                <p class="card-text">eNamecard</p>
-                <p class="card-text">Form request for training</p>
-                <p class="card-text">Form request for consulting</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="alert alert-primary" role="alert">
-                <h5 class="card-title">TIMING</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Mon - Fri: 9 am - 5 pm</p>
-                <p class="card-text">Sat: 8 am - 10 am</p>
-                <p class="card-text">Closings</p>
-                <p class="card-text">Branches</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 {% endblock %}
