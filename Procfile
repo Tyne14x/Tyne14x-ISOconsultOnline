@@ -1,1 +1,1 @@
-web: gunicorn isoconsult.wsgi --log-file -
+web: gunicorn Finalpro.wsgi
