@@ -36,7 +36,6 @@ def TrainingPage(request):
         addcouse2 = request.POST.get('addcouse2')
         adddate2 = request.POST.get('adddate2')
 
-
         data = {
             'company' : company,
             'address' : address,
