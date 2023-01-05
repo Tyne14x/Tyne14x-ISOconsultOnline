@@ -71,7 +71,7 @@
     </ul>
     <div>
       {% if user.is_authenticated %}
-        <font color="red">สวัสดี&nbsp {{user.first_name}}&nbsp&nbsp{{user.last_name}}</font>
+        <font class="mr-2" style='color: #db10d1;'>Welcome&nbsp {{user.first_name}}&nbsp&nbsp{{user.last_name}}</font>
         <a class="btn btn-primary" href="{% url 'logout' %}">LogOut</a>
       {%else %}
       <a class="btn btn-primary" href="{% url 'login' %}">Login</a>

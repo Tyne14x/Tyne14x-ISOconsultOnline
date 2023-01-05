@@ -3,13 +3,15 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
+from isoconsult.models import Contact
 
 #ฟังก์ชัน HomePage
 def HomePage(request):
-    return render(request, 'iso/home.html')
+    all_contact = Contact.objects.all()
+    return render(request, "home.html", {"all_contact":all_contact})
 
 def AboutPage(request):
-    return render(request, 'iso/about.html')
+    return render(request, 'about.html')
 
 def TrainingPage(request):
     if request.method == 'POST':
@@ -35,6 +37,14 @@ def TrainingPage(request):
         adddate1 = request.POST.get('adddate1')
         addcouse2 = request.POST.get('addcouse2')
         adddate2 = request.POST.get('adddate2')
+
+        newcontact = Contact()
+        newcontact.company = company
+        newcontact.address = address
+        newcontact.position = position
+        newcontact.cusemail = cusemail
+        newcontact.date = datetrain
+        newcontact.save()
 
         data = {
             'company' : company,
@@ -87,13 +97,35 @@ def TrainingPage(request):
         data['nun-partic'],data['date-train'],data['addcouse1'],data['adddate1'],data['addcouse2'],data['adddate2'])
 
         send_mail('Contact Form',body, '', [cusemail])#('subject',เนื้อหา,อีเมลล์ที่ส่ง)
-    return render(request, 'iso/training.html',{})
+    return render(request, 'training.html',{})
+
 
 def BlogPage(request):
-    return render(request, 'iso/blog.html')
+    return render(request, 'blog.html')
 
 def ContactPage(request):
-    return render(request, 'iso/contact.html')
+    return render(request, 'contact.html')
+
+
+
+def edit(request,contact_id):
+    if request.method == "POST":
+        contact = Contact.objects.get(id = contact_id)
+        contact.company = request.POST["company"]
+        contact.address = request.POST["address"]
+        contact.position = request.POST["position"]
+        contact.cusemail = request.POST["cusemail"]
+        contact.save()
+        return redirect("/")
+
+    else:
+        contact = Contact.objects.get(id = contact_id)
+        return render(request,"edit.html",{"contact":contact})
+
+def delete(request,contact_id):
+    contact = Contact.objects.get(id = contact_id)
+    contact.delete()
+    return redirect("/")
 
 def Register(request):
     if request.method == 'POST':
@@ -112,5 +144,6 @@ def Register(request):
         newuser.save()
         return redirect('login')
 
-    return render(request, 'iso/register.html')
+    return render(request, 'register.html')
+    
 
