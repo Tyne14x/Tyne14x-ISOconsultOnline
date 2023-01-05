@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,13 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>ISO</title>
-
+    {% block title %}
+    {% endblock %}
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -26,7 +23,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      .bd-placeholder-img {
+     .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -44,13 +41,12 @@
     <!-- Custom styles for this template -->
     
   </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color: #404347;'>
-     <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top" style='background-color: #ffd666;'> -->
-  <!-- <a class="navbar-brand" href="#">Home</a> -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color: #404347;'>
+    <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top" style='background-color: #ffd666;'> -->
+ <!-- <a class="navbar-brand" href="#">Home</a> -->
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+ </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
@@ -104,7 +100,9 @@
 
 </main>
 
-
+<footer class="container">
+  <p>&copy; ISO</p>
+</footer>
 
 
 <!--การ์ด Footer -->
@@ -145,6 +143,13 @@
   </div>
 </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"72bd33035b38ab56","version":"2022.6.0","r":1,"token":"ebb08103de9142f2a31fad4575cace74","si":100}' crossorigin="anonymous"></script>
 
 </body>
 </html>
