@@ -1,3 +1,12 @@
 from django.db import models
 
 # Create your models here.
+class Contact(models.Model):
+    company = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
+    position = models.CharField(max_length=50)
+    cusemail = models.CharField(max_length=100)
+    date = models.DateField(blank=True, null=True)
+
+    def __str__(self):
+        return self.cusemail
