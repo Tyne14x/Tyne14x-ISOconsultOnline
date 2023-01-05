@@ -27,8 +27,8 @@ DEBUG = True
 LOGIN_URL = 'login'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jemmax22463@gmail.com'
-EMAIL_HOST_PASSWORD = 'txobgsbuyovgdjlq'
+EMAIL_HOST_USER = 'nutaponza123456@gmail.com'
+EMAIL_HOST_PASSWORD = 'yrqigshegrzsjcyj'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
